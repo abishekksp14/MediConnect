@@ -1,0 +1,23 @@
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { store } from './store.js';
+import { ToastProvider } from './components/ToastProvider.jsx';
+import { NotificationProvider } from './components/NotificationProvider.jsx';
+import { ThemeProvider } from './contexts/ThemeContext.jsx';
+import './index.css';
+import App from './App.jsx';
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <Provider store={store}>
+      <ThemeProvider>
+        <ToastProvider>
+          <NotificationProvider>
+            <App />
+          </NotificationProvider>
+        </ToastProvider>
+      </ThemeProvider>
+    </Provider>
+  </StrictMode>,
+);

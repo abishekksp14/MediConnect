@@ -1,0 +1,223 @@
+.doctors-page {
+  min-height: calc(100vh - 80px);
+  background-color: var(--bg-main);
+  padding-bottom: 6rem;
+}
+
+.doctors-header {
+  padding: 5rem 0;
+  text-align: center;
+  background: white;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.doctors-header h1 {
+  font-size: 3rem;
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+}
+
+.doctors-header p {
+  color: var(--text-light);
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-weight: 500;
+}
+
+.search-bar {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  background: white;
+  padding: 0.625rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-color);
+  align-items: center;
+  transition: all var(--transition-normal);
+}
+
+.search-bar:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15);
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 0.875rem 1.25rem;
+  font-size: 1rem;
+  outline: none;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.doctors-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.filters-sidebar {
+  background: white;
+  padding: 2.5rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  height: fit-content;
+  box-shadow: var(--shadow-md);
+}
+
+.filter-group h3 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.specialty-list li {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.specialty-list li:hover {
+  color: var(--primary);
+  background: var(--primary-light);
+  transform: translateX(4px);
+}
+
+.specialty-list li.active {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.doctor-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.doctor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary);
+}
+
+.doctor-card-header {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.doctor-avatar-box {
+  width: 100px; height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  position: relative;
+}
+
+.doctor-avatar {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 4px; right: 4px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  border: 4px solid white;
+  background: var(--success);
+}
+
+.doctor-card-body h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.specialty-tag {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.875rem;
+  background: var(--primary-light);
+  padding: 0.25rem 1rem;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+.rating-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.rating-box span { color: var(--text-light); font-weight: 500; font-size: 0.875rem; }
+
+.doctor-card-footer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 1024px) {
+  .doctors-content { grid-template-columns: 1fr; }
+}
+
+.price-range {
+  width: 100%;
+  margin: 1rem 0;
+  accent-color: var(--primary);
+}
+
+.rating-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-chip {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-chip.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+

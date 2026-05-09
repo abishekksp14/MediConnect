@@ -1,0 +1,146 @@
+.how-it-works-page {
+  min-height: calc(100vh - 72px);
+  background-color: var(--bg-main);
+}
+
+.hiw-header {
+  padding: 5rem 0;
+  text-align: center;
+  background-color: var(--dark);
+  color: white;
+}
+
+.hiw-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hiw-header p {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+}
+
+.hiw-content {
+  padding: 4rem 2rem;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step-card {
+  display: flex;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--dark);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-text {
+  flex: 1;
+}
+
+.step-text h2 {
+  font-size: 1.75rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.step-text p {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.step-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.step-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.hiw-cta {
+  margin-top: 5rem;
+  padding: 4rem;
+  background: linear-gradient(135deg, var(--primary-light), white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.hiw-cta h2 {
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.hiw-cta p {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .step-card {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .step-number {
+    left: 20px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+}

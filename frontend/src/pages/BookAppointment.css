@@ -1,0 +1,70 @@
+.book-page {
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 72px);
+  background-color: var(--bg-main);
+  display: flex;
+  justify-content: center;
+}
+
+.book-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.book-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.book-header h2 {
+  font-size: 2rem;
+  color: var(--dark);
+}
+
+.book-header p {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.doctor-info {
+  background-color: var(--primary-light);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+}
+
+.doctor-info p {
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.book-form .form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.book-form select, .book-form input[type="date"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.book-submit {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  font-size: 1.125rem;
+}
